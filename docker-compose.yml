@@ -1,0 +1,13 @@
+version: '2.3'
+
+services:
+  pyspark:
+    build: .
+    user: root
+    # environment:
+    #   - NB_UID=$(id -u)
+    ports:
+      - 8888:8888
+    volumes:
+      - ./:/home/jovyan/work
+    working_dir: /home/jovyan/work
